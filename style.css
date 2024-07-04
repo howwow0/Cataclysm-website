@@ -202,20 +202,19 @@ summary {
   width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-.card-icon{
-  height: 128px;
+.card-icon{ 
   margin: 10px;
 }
 .card-icon img {
   border-radius: 5px;
-  height: 100%;
+  max-width:100%;height:auto;
 }
 
 .card-content h3 {
@@ -227,6 +226,13 @@ summary {
   color: #666;
   padding: 10px;
   
+}
+.it-org-cataclysm h1{
+  color: #FF8427;
+  font-family: "Comic Sans MS";
+}
+.it-org-cataclysm p{
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /*END INDEX.HTML */
