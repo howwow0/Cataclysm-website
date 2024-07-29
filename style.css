@@ -278,6 +278,28 @@ summary {
   height: auto;
   border-radius: 10px;
 }
+
+ @keyframes splash {
+            0% {
+                transform: scale(0.9);
+                opacity: 1;
+                filter: brightness(100%);
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+                filter: brightness(150%);
+            }
+            100% {
+                transform: scale(0.9);
+                opacity: 1;
+                filter: brightness(100%);
+            }
+        }
+
+        .animate-logo {
+            animation: splash 1.5s infinite;
+        }
 /*END contacts.html*/
 
 

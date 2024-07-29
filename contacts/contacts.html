@@ -20,7 +20,7 @@
         <div class="logo-info">
             <h1>Контакты</h1>
             <div class="creator-card">
-                <img src="../images/creator.png" alt="Creator Logo">
+                <img id="creator-logo" src="../images/creator.png" alt="Creator Logo">
                 <div class="creator-info">
                     <p>Сайт создан студентом 1 курса Ярощук Никитой (HowWow)</p>
                     <div class="social-icons">
@@ -31,6 +31,7 @@
                         <a href="https://vk.com/howwow_ls" target="_blank"><img src="../images/vk.png" alt="VK"></a>
                     </div>
                 </div>
+				 <audio id="easter-egg-audio" src="../audio/Clint_Mansell_-_Requiem_for_a_dream_10722.mp3" preload="auto"></audio>
             </div>
 
         </div>
@@ -38,6 +39,31 @@
     <footer>
         <p>&copy; 2024 Образовательный портал по природным катаклизмам. Все права защищены.</p>
     </footer>
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const logo = document.getElementById('creator-logo');
+            const audio = document.getElementById('easter-egg-audio');
+            let isPlaying = false;
+
+            if (logo && audio) {
+                logo.addEventListener('click', function () {
+                    if (isPlaying) {
+                        audio.pause();
+                        logo.classList.remove('animate-logo');
+                    } else {
+                        audio.play();
+                        logo.classList.add('animate-logo');
+                    }
+                    isPlaying = !isPlaying;
+                });
+
+                audio.addEventListener('ended', function () {
+                    isPlaying = false;
+                    logo.classList.remove('animate-logo');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
