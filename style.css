@@ -297,8 +297,49 @@ summary {
             }
         }
 
+        @keyframes line-animation {
+            0% {
+                box-shadow: 0 0 0 0 red, 0 0 0 0 transparent;
+            }
+            50% {
+                box-shadow: 0 0 20px 5px transparent, 0 0 20px 5px orange;
+            }
+            100% {
+                box-shadow: 0 0 0 0 red, 0 0 0 0 transparent;
+            }
+        }
+
+        .creator-info p {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .creator-info p::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid transparent;
+            box-shadow: 0 0 0 0 red, 0 0 0 0 transparent;
+            pointer-events: none;
+            display: none;
+            border-radius: 5px;
+        }
+
         .animate-logo {
             animation: splash 1.5s infinite;
+        }
+
+        .animate-line p::after {
+            display: block;
+            animation: line-animation 3s linear infinite;
         }
 /*END contacts.html*/
 
