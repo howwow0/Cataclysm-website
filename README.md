@@ -6,7 +6,7 @@
 
 Исследуйте местоположения крупных катаклизмов на нашей интерактивной карте.
 
-[Перейдите на сайт](https://howwow0.github.io/Cataclysm-websiteNew/index.html)
+[Перейдите на сайт](https://howwow0.github.io/Cataclysm-website/index.html)
 
 ## Автор
 Никита (HowWow)
